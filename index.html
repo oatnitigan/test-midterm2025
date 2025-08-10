@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Website</title>
+    <link rel="stylesheet" href="css/grid-layout.css">
+</head>
+<body>
+    <div class="grid-container"> 
+        <div class="header"> 
+            <h2>My Website</h2> 
+        </div> 
+
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <ul>
+        <li><a href="https://www.kmutnb.ac.th" target="_blank" rel="noopener noreferrer">KMUTNB</a></li>
+        <li><a href="http://202.44.47.45/fitm" target="_blank" rel="noopener noreferrer">FITM</a></li>
+        <li><a href="http://202.44.47.45/fitm/departments/IT" target="_blank" rel="noopener noreferrer">IT DEPT</a></li>
+      </ul>
+      <form role="search" onsubmit="event.preventDefault(); alert('Search not implemented');">
+        <input type="search" placeholder="Search..." aria-label="Search" />
+        <button type="submit">Go</button>
+      </form>
+    </nav>
+
+        <div class="left">
+            <nav class="sidebar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>  
+
+        <div class="middle">
+            <h1>Welcome to My Website</h1>
+            <p>This is the home page. Use the menu on the left to navigate.</p>
+
+            <h2>1st Year Study Plan</h2>
+            <table class="study-plan">
+            <thead>
+                <tr>
+                <th>Subject</th>
+                <th>Credit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Introduction to Computer Science</td>
+                <td>3</td>
+                </tr>
+                <tr>
+                <td>Mathematics I</td>
+                <td>4</td>
+                </tr>
+                <tr>
+                <td>English for Communication</td>
+                <td>3</td>
+                </tr>
+                <tr>
+                <td>Programming Fundamentals</td>
+                <td>3</td>
+                </tr>
+                <tr>
+                <td>Physics for Engineers</td>
+                <td>3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                <td><strong>Total Credits</strong></td>
+                <td><strong>16</strong></td>
+                </tr>
+            </tfoot>
+            </table>
+        </div> 
+        <!--
+        <div class="right">
+            <h2>Right Column</h2>
+            <p>Extra information or ads can go here.</p>
+        </div> 
+    -->
+        <div class="footer">
+            <h1>Footer</h1>
+        </div> 
+    </div>
+</body>
+</html>

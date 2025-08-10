@@ -1,0 +1,229 @@
+* { 
+  box-sizing: border-box; 
+}
+body { 
+  font-family: Arial, Helvetica, sans-serif; 
+} 
+.header { 
+  grid-area: header;  background-color: #fb4343;  padding: 30px;  text-align: center; 
+  font-size: 35px; 
+}
+/*
+.grid-container { 
+  display: grid; 
+  grid-template-areas:  
+    'header header header header header header'  
+    'left middle middle middle middle middle'  
+    'footer footer footer footer footer footer'; 
+   grid-column-gap: 10px; - if you want gap between the columns 
+}
+*/ 
+.grid-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr; /* Left fixed 200px, middle and right share space */
+    grid-template-areas:
+        'header header header'
+        'navbar navbar navbar'
+        'left middle right'
+        'footer footer footer';
+}
+
+.navbar {
+    height: 50px;
+      grid-area: navbar;
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 8px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+      color: #f843c4;
+    }
+
+    .navbar form {
+      display: flex;
+      gap: 5px;
+    }
+
+    .navbar input[type="search"] {
+      padding: 6px 8px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .navbar button {
+      padding: 6px 12px;
+      background-color: #f843c4;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar button:hover {
+      background-color: #d032a3;
+    }
+
+
+.left, 
+.middle, 
+.right { 
+  padding: 10px; 
+  height: 100%; /* Should be removed. Only for demonstration */ 
+} 
+.left { 
+  grid-area: left; 
+   background-color: #f8d617;
+} 
+/* Style the middle column */ 
+.middle { 
+  grid-area: middle; 
+} 
+/* Style the right column */ 
+.right { 
+    grid-area: right; 
+}
+.footer { 
+    grid-area: footer;  background-color: #f843c4;  padding: 10px;  text-align: center; 
+}
+
+
+.sidebar {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 10px; /* spacing between images */
+  margin-top: 20px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+form.register-form {
+      max-width: 500px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    form.register-form label {
+      font-weight: bold;
+    }
+    form.register-form input[type="text"],
+    form.register-form input[type="email"],
+    form.register-form input[type="password"],
+    form.register-form input[type="tel"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    form.register-form button[type="submit"] {
+      background-color: #fb4343;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form.register-form button[type="submit"]:hover {
+      background-color: #d03232;
+    }
+
+    .study-plan {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.study-plan th,
+.study-plan td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.study-plan thead {
+  background-color: #fb4343;
+  color: white;
+}
+
+.study-plan tfoot {
+  background-color: #f843c4;
+  color: white;
+  font-weight: bold;
+}
+
+
+@media (max-width: 600px) { 
+.grid-container  { 
+    grid-template-areas:  
+        'header header header header header header'  
+        'left left left left left left'  
+        'middle middle middle middle middle middle'  
+        /*'right right right right right right'  */
+        'footer footer footer footer footer footer'; 
+    } 
+}  
+

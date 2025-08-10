@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - My Website</title>
+    <link rel="stylesheet" href="css/grid-layout.css">
+</head>
+<body>
+    <div class="grid-container"> 
+        <div class="header"> 
+            <h2>My Website</h2> 
+        </div> 
+
+            <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <ul>
+        <li><a href="https://www.kmutnb.ac.th" target="_blank" rel="noopener noreferrer">KMUTNB</a></li>
+        <li><a href="http://202.44.47.45/fitm" target="_blank" rel="noopener noreferrer">FITM</a></li>
+        <li><a href="http://202.44.47.45/fitm/departments/IT" target="_blank" rel="noopener noreferrer">IT DEPT</a></li>
+      </ul>
+      <form role="search" onsubmit="event.preventDefault(); alert('Search not implemented');">
+        <input type="search" placeholder="Search..." aria-label="Search" />
+        <button type="submit">Go</button>
+      </form>
+    </nav>
+
+
+        <div class="left">
+            <nav class="sidebar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>  
+
+        <div class="middle">
+            <h1>My Profile</h1>
+            <p>Hello! This is the profile page. </p><p> can write information about yourself here.</p>
+            <div class="photo-grid">
+                <img src="images/photo1.jpg" alt="Photo 1" />
+                <img src="images/photo1.jpg" alt="Photo 2" />
+                <img src="images/photo1.jpg" alt="Photo 3" />
+                <img src="images/photo1.jpg" alt="Photo 4" />
+            </div>
+        </div> 
+        <!--
+        <div class="right">
+            <h2>Right Column</h2>
+            <p>Additional profile-related content.</p>
+        </div> 
+        -->
+        <div class="footer">
+            <h1>Footer</h1>
+        </div> 
+    </div>
+</body>
+</html>

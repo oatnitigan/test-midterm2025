@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fixed Footer Example</title>
+<style>
+  /* Reset & center */
+  html, body {
+    margin: 0; padding: 0;
+    height: 100%;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Main grid container fixed size */
+  .grid-container {
+    width: 1920px;
+    height: 100%;
+    background: white;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr 60px; /* header | content | footer */
+    grid-template-areas:
+      "header header"
+      "left middle"
+      "footer footer";
+    border: 2px solid black;
+  }
+
+  .header {
+    grid-area: header;
+    background: #fb4343;
+    color: white;
+    padding: 20px;
+    font-size: 2rem;
+  }
+
+  .left {
+    grid-area: left;
+    background: #e5ff00;
+    padding: 20px;
+  }
+
+  .middle {
+    grid-area: middle;
+    padding: 20px;
+    overflow: auto; /* scroll if content is big */
+  }
+
+  .footer {
+    grid-area: footer;
+    background: #f843c4;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  @media (max-width: 600px) { 
+.grid-container  { 
+    grid-template-areas:  
+        'header header header header header header'  
+        'left left left left left left'  
+        'middle middle middle middle middle middle'  
+        /*'right right right right right right'  */
+        'footer footer footer footer footer footer'; 
+    } 
+}  
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="header">Header Area</div>
+  <div class="left">Left Sidebar</div>
+  <div class="middle">
+    <h1>Main Content</h1>
+    <p>This content area will grow and the footer stays at the bottom.</p>
+  </div>
+  <div class="footer">Footer at the bottom</div>
+</div>
+
+</body>
+</html>
